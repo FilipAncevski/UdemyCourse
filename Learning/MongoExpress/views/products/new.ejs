@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+</head>
+<body>
+    <h1>Add a new product</h1>
+    <form action="/products" method="post">
+        <label for="name">Product name</label>
+        <input type="text" name="name" id="name" placeholder="Enter fruit name">
+        <label for="price">Product price</label>
+        <input type="number" id="price" placeholder="Enter fruit price" name="price">
+        <label for="catergory">Product catergory</label>
+          
+        <select id="catergory" name="catergory">
+             
+            <option value="fruit" <% if(products.catergory === "fruit" ? "selected" : "")%>>Fruit</option>
+            <option value="vegetable" <% if(products.catergory === "vegetable" ? "selected" : "")%>>Vegetable</option>
+            <option value="dairy" <% if(products.catergory === "dairy" ? "selected" : "")%>>Dairy</option>
+            </select>
+          
+          <button>Submit</button>
+    </form>
+</body>
+</html>

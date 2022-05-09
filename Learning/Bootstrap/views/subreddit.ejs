@@ -1,0 +1,18 @@
+<%- include('partials/head')  %> 
+    <%- include('partials/navbar') %>
+      <div class="container">
+    <h1>Welcome to the subreddit of <%= name %></h1>
+    <h2><%= description %></h2>
+    <p>Has total subscribers of <%=subscribers%></p>
+    <hr>
+    <div> 
+        <%for(let post of posts){%>
+            <h3><%= post.title %> from the author <%=post.author %></h3>
+         <%   if(post.img){%>
+                <img src="<%= post.img %>" alt="">
+         <%   }%>
+        <%}%>
+    </div>
+</div>
+<%- include('partials/footer') %>
+
